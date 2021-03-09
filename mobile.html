@@ -68,7 +68,7 @@
             <span>Volume</span>
         </label>
 
-        <input type="submit" value="Submit">
+        <input id="submit" type="submit" value="Submit">
     </form>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
@@ -76,7 +76,7 @@
             $('#main-form').bind("submit", (e)=>{
                 e.preventDefault();
                 alert("Tree data submitted successfully!");
-                $('#main-form').find('input')
+                $('#main-form').find('input').not("#submit")
                     .each(function () {
                         $(this).val('');
                     });
