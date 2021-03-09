@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>IT351 HCI Assignment</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Forest Tree Census</h1>
+        <h3>Field observation data portal</h3>
+    </header>
+    <div class="container">
+        <div class="card"></div>
+        <div class="card">
+            <form id="main-form">
+                <div class="title">Tree Details</div>
+                <div class="input-container">
+                    <input type="text" id="name" required="required" />
+                    <label for="name">Tree Name</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="type" required="required" />
+                    <label for="type">Tree Type</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="title">Date and Time of Observation</div>
+                <div class="input-container">
+                    <input id="date" required="required" onfocus="(this.type='date')"
+                        onblur="if(!this.value)this.type='text'" />
+                    <label for="date">Date</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="input-container">
+                    <input id="time" required="required" onfocus="(this.type='time')"
+                        onblur="if(!this.value)this.type='time'" />
+                    <label for="time">Time</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="title">GPS Co-ordinates</div>
+                <div class="input-container">
+                    <input type="text" id="lat" required="required" />
+                    <label for="lat">Latitude</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="long" required="required" />
+                    <label for="long">Longitude</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="title">Tree Measurements</div>
+                <div class="input-container">
+                    <input type="text" id="height" required="required" />
+                    <label for="height">Height</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="girth" required="required" />
+                    <label for="girth">Girth</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="crown" required="required" />
+                    <label for="crown">Crown Spread</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="volume" required="required" />
+                    <label for="volume">Volume</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="button-container">
+                    <button><span>Submit</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        $('#main-form').bind("submit", (e) => {
+            e.preventDefault();
+            alert("Tree data submitted successfully!");
+            $('#main-form').find('input')
+                .each(function () {
+                    $(this).val('');
+                });
+
+            $('#name').focus();
+        })
+    </script>
+
+</body>
+
+</html>

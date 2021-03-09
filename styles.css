@@ -1,0 +1,185 @@
+﻿body {
+    background: #e9e9e9;
+    color: #666666;
+    font-family: "RobotoDraft", "Roboto", sans-serif;
+    font-size: 10px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80');
+}
+
+/* Pen Title */
+header {
+    padding: 50px 0;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #ddd;
+    text-shadow: 1px 1px 10px #212121 ;
+}
+
+header h1 {
+    margin: 0 0 20px;
+    font-size: 4em;
+}
+
+header h3{
+    font-size: 2em;
+    font-weight: 300;
+}
+
+/* Container */
+.container {
+    position: relative;
+    max-width: 760px;
+    width: 100%;
+    margin: 0 auto 100px;
+}
+
+.container.active .card:first-child {
+    background: #f2f2f2;
+    margin: 0 15px;
+}
+
+.container.active .card:nth-child(2) {
+    background: #fafafa;
+    margin: 0 10px;
+}
+
+/* Card */
+.card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 60px 0 40px 0;
+    box-sizing: border-box;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: 0.3s ease;
+}
+
+.card:first-child {
+    background: #fafafa;
+    height: 10px;
+    border-radius: 5px 5px 0 0;
+    margin: 0 10px;
+    padding: 0;
+}
+
+.card .title {
+    position: relative;
+    z-index: 1;
+    border-left: 5px solid #669900;
+    margin: 0 0 15px;
+    padding: 10px 0 10px 50px;
+    color: #669900;
+    font-size: 2.28em;
+    font-weight: 600;
+}
+
+.card .input-container {
+    position: relative;
+    margin: 0 60px 20px;
+}
+
+.card .input-container input {
+    outline: none;
+    z-index: 1;
+    position: relative;
+    background: none;
+    width: 100%;
+    height: 60px;
+    border: 0;
+    color: #212121;
+    font-size: 1.71em;
+    font-weight: 400;
+}
+
+.card .input-container input:focus ~ label {
+    color: #9d9d9d;
+    transform: translate(-12%, -50%) scale(0.75);
+}
+
+.card .input-container input:focus ~ .bar:before,
+.card .input-container input:focus ~ .bar:after {
+    width: 50%;
+}
+
+.card .input-container input:valid ~ label {
+    color: #9d9d9d;
+    transform: translate(-12%, -50%) scale(0.75);
+}
+
+.card .input-container label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #757575;
+    font-size: 1.71em;
+    font-weight: 300;
+    line-height: 60px;
+    transition: 0.2s ease;
+}
+
+.card .input-container .bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #757575;
+    width: 100%;
+    height: 1px !important;
+}
+
+.card .input-container .bar:before,
+.card .input-container .bar:after {
+    content: "";
+    position: absolute;
+    background: #669900;
+    width: 0;
+    height: 2px;
+    transition: 0.2s ease;
+}
+
+.card .input-container .bar:before {
+    left: 50%;
+}
+
+.card .input-container .bar:after {
+    right: 50%;
+}
+
+.card .button-container {
+    margin: 0 60px;
+    text-align: center;
+}
+
+.card .button-container button {
+    outline: 0;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    background: 0;
+    width: 240px;
+    border: 2px solid #669900;
+    padding: 20px 0;
+    font-size: 1.71em;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.card .button-container button span {
+    position: relative;
+    z-index: 1;
+    color: #669900;
+}
+
+@keyframes buttonFadeInUp {
+    0% {
+        bottom: 30px;
+        opacity: 0;
+    }
+}
